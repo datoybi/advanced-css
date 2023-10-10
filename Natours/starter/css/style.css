@@ -44,18 +44,24 @@ body {
   height: 35px; /* height만 지정하면 width는 저절로 변한다*/
 }
 
+/* .logo:hover {
+  animation: moveInRight 1s ease-out;
+} */
+
 .text-box {
   /* 중앙정렬 */
   position: absolute;
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%); /* translate은 요소의 위치를 X, Y만큼 이동시킨다. */
+  text-align: center;
 }
 
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
   backface-visibility: hidden; /* 뒷면 숨기기인데 글꼴 벌어졌다 모아지는 버그 없앨때 사용 */
+  margin-bottom: 60px;
 }
 
 .heading-primary-main {
@@ -114,4 +120,70 @@ body {
     opacity: 1;
     transform: translateX(0);
   }
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 40px;
+  display: inline-block; /* inline-block은 text-align center하면 정렬된다 */
+  border-radius: 100px;
+  transition: all 0.2s;
+  position: relative;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-white {
+  background-color: #fff;
+  color: #777;
+}
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute; /* position: relative한 값을 기준으로 absolute된다. 여기서는 btn */
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+  /* 에니메이션 프로퍼티는 initial state에 넣어야 한다 */
+}
+
+.btn-white::after {
+  background-color: #fff;
+}
+
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+.btn-animated {
+  animation: moveInBottom 0.5s ease-out 0.75s;
+  animation-fill-mode: backwards; /* 시작하기 전에 style을 0으로 지정, 그래서 버튼이 보였다 사라짐을 방지 */
 }
