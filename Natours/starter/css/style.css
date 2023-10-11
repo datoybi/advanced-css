@@ -185,5 +185,5 @@ body {
 
 .btn-animated {
   animation: moveInBottom 0.5s ease-out 0.75s;
-  animation-fill-mode: backwards; /* 시작하기 전에 style을 0으로 지정, 그래서 버튼이 보였다 사라짐을 방지 */
+  animation-fill-mode: backwards; /* 시작하기 전에 style을 0으로 지정, 그래서 버튼이 보였다 사라짐을 방지한다. */
 }
