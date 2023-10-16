@@ -42,13 +42,13 @@ body {
   position: relative;
 }
 
-.logo-box {
+.header__logo-box {
   position: absolute;
   top: 4rem;
   left: 4rem;
 }
 
-.logo {
+.header__logo {
   height: 3.5rem; /* height만 지정하면 width는 저절로 변한다*/
 }
 
@@ -56,7 +56,7 @@ body {
   animation: moveInRight 1s ease-out;
 } */
 
-.text-box {
+.header__text-box {
   /* 중앙정렬 */
   position: absolute;
   top: 40%;
@@ -72,7 +72,7 @@ body {
   margin-bottom: 60px;
 }
 
-.heading-primary-main {
+.heading-primary--main {
   display: block;
   font-size: 6rem;
   font-weight: 400;
@@ -85,7 +85,7 @@ body {
 	animation-delay: 3s; */
 }
 
-.heading-primary-sub {
+.heading-primary--sub {
   display: block;
   font-size: 2rem;
   font-weight: 400;
@@ -164,7 +164,7 @@ body {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 
-.btn-white {
+.btn--white {
   background-color: #fff;
   color: #777;
 }
@@ -183,7 +183,7 @@ body {
   /* 에니메이션 프로퍼티는 initial state에 넣어야 한다 */
 }
 
-.btn-white::after {
+.btn--white::after {
   background-color: #fff;
 }
 
@@ -192,7 +192,7 @@ body {
   opacity: 0;
 }
 
-.btn-animated {
+.btn--animated {
   animation: moveInBottom 0.5s ease-out 0.75s;
   animation-fill-mode: backwards; /* 시작하기 전에 style을 0으로 지정, 그래서 버튼이 보였다 사라짐을 방지한다. */
 }
