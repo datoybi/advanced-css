@@ -4,7 +4,7 @@
     url(../img/hero.jpg);
   background-size: cover; /* 뷰포트에 딱맞게 */
   background-position: top;
-  clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   /* clip-path: polygon(0 0, 0 0, 100% 200px, 0 100%); */
   /* 요소를 잘라낸다. 시계방향으로 왼쪽 위, 오른쪽 위, 오른쪽 아래, 왼쪽 아래 좌표 순으로 명시하기 */
   position: relative;

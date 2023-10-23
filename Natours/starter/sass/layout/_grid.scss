@@ -1,7 +1,7 @@
 .row {
   max-width: $grid-width;
   // 뷰포트의 width가 1140px이상 안늘어나게
-  background-color: #eee;
+  // background-color: #eee;
   margin: 0 auto;
 
   &:not(:last-child) {
@@ -13,7 +13,7 @@
 
   [class^="col-"] {
     // class start with col
-    background-color: orangered;
+    // background-color: orangered;
     float: left;
 
     &:not(:last-child) {
